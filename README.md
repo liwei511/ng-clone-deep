@@ -1,3 +1,5 @@
+[![NPM](https://nodei.co/npm/ng-clone-deep.png?mini=true)](https://nodei.co/npm/ng-clone-deep/)
+
 # Install
 
 ```bash

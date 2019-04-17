@@ -15,5 +15,8 @@
     "email": "liwei511@live.cn",
     "url": "https://github.com/liwei511"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "git": "//github.com/liwei511/ng-clone-deep"
+  }
 }
