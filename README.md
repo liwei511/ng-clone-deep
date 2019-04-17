@@ -1,24 +1,47 @@
-# NgCloneDeep
+# Install
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.0.
+```bash
+npm install ng-clone-deep --save
+```
 
-## Code scaffolding
+## Use
 
-Run `ng generate component component-name --project ng-clone-deep` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ng-clone-deep`.
-> Note: Don't forget to add `--project ng-clone-deep` or else it will be added to the default project in your `angular.json` file. 
+Import the service into every component
 
-## Build
+```ts
+import { Component, OnInit } from '@angular/core';
+import { NgCloneDeepService } from 'ng-clone-deep';
 
-Run `ng build ng-clone-deep` to build the project. The build artifacts will be stored in the `dist/` directory.
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent implements OnInit {
+  source = [{name: 'Tom'}, {name: 'Jerry'}];
+  constructor(private cloneDeep: NgCloneDeepService) {}
 
-## Publishing
+  ngOnInit() {
+    const sourceClone = this.cloneDeep.clone(this.source); // cloneDeep.clone()
+  }
+}
 
-After building your library with `ng build ng-clone-deep`, go to the dist folder `cd dist/ng-clone-deep` and run `npm publish`.
+```
 
-## Running unit tests
+## example
 
-Run `ng test ng-clone-deep` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Import the module into every module where you want to use the components.
 
-## Further help
+```ts
+import { NgCloneDeepModule } from 'ng-clone-deep/public-api';
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+@NgModule({
+  imports: [ NgCloneDeepModule ]
+})
+export class AppModule {
+}
+```
+
+```html
+<litwak-ng-clone-deep></litwak-ng-clone-deep>
+```
