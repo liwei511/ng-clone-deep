@@ -16,7 +16,8 @@
     "url": "https://github.com/liwei511"
   },
   "license": "MIT",
-  "dependencies": {
-    "git": "//github.com/liwei511/ng-clone-deep"
-  }
+  "repository": {
+    "url": "https://github.com/liwei511/ng-clone-deep"
+  },
+  "homepage": "https://github.com/liwei511/ng-clone-deep"
 }
